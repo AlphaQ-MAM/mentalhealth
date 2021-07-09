@@ -1,0 +1,19 @@
+.carousel {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+/* .carousel .carousel-item {
+  height: 70%;
+  width: 30%;
+} */
+.carousel .carousel-item h3 {
+  margin: 0;
+  padding: 10px 5px;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+}

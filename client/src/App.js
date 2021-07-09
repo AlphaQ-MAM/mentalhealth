@@ -1,12 +1,10 @@
-
-import './App.css';
-import Chart from './components/chart';
+import "./App.css";
+import Home from "./pages/Home";
+// import Chart from "./components/chart";
 function App() {
   return (
     <div className="App">
-     <div className="chart">
-       <Chart/>
-     </div>
+      <Home />
     </div>
   );
 }
