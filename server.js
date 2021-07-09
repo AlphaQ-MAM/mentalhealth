@@ -1,13 +1,22 @@
 const express=require('express');
 const mongoose=require('mongoose');
-const cors=require('cors');
-const MONGODB_URI ="mongodb+srv://MahakC:nodecomplete123@cluster0.nlcrx.mongodb.net/mentalhealth?retryWrites=true&w=majority"
+const cors = require('cors');
+const dotenv = require('dotenv');
+const testRoutes = require('./routes/testRoutes')
+const responseRoutes = require('./routes/responseRoutes')
+
+
+
+dotenv.config();
+const MONGODB_URI =process.env.MONGODB_URL
 
 const app=express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/test', testRoutes)
+app.use('/response', responseRoutes)
 
 
 
@@ -20,7 +29,7 @@ mongoose.connect(MONGODB_URI, {
     })
     .then(result => {
         console.log('connected');
-        app.listen(8080);
+        app.listen(3030);
     })
     .catch(err => {
         console.log(err);
