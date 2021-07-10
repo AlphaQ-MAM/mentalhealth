@@ -12,9 +12,11 @@ export default function Navbar(props) {
         document.body.scrollTop > 0 ||
         document.documentElement.scrollTop > 0
       ) {
-        document.getElementById("navbar").style.background = "#c9e4f0";
+        document.getElementById("navbar").style.background = "black";
+        document.getElementById("navbar").style.opacity = ".8";
       } else {
-        document.getElementById("navbar").style.background = "none";
+        document.getElementById("navbar").style.background = "black";
+        document.getElementById("navbar").style.opacity = "1";
       }
     }
   });
@@ -22,14 +24,10 @@ export default function Navbar(props) {
     <div className="navbar-fixed">
       <nav className="nav-wrapper" id="navbar">
         <div className="container">
-          <a href="#" className="brand-logo blue-text">
+          <a href="#" className="brand-logo">
             Logo
           </a>
-          <a
-            href="#"
-            className="sidenav-trigger blue-text"
-            data-target={props.id}
-          >
+          <a href="#" className="sidenav-trigger" data-target={props.id}>
             <i className="material-icons">menu</i>
           </a>
           <NavLinks name="Sign Up" loc="" />
