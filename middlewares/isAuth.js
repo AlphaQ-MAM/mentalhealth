@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
     if (!decodedToken) {
         return res.status(401).send('Not Authenticated');
     }
-    req.userId = decodedToken.userId; //attaching userId with req
+    req.studentId = decodedToken.userId; //attaching userId with req
     req.username = decodedToken.username;//attaching username with req
     next();
 };
