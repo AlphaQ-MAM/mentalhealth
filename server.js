@@ -4,7 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const testRoutes = require('./routes/testRoutes')
 const responseRoutes = require('./routes/responseRoutes')
-
+const userRoutes = require('./routes/studentRoute')
 
 
 dotenv.config();
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/test', testRoutes)
 app.use('/response', responseRoutes)
-
+app.use('/user', userRoutes)
 
 
 

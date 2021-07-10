@@ -40,3 +40,10 @@ exports.fetchResponse=(req, res, next)=> {
 
 
 
+// exports.fetchAvg = async(req, res, next) => {
+//     const testId = req.params.testId
+//     console.log( typeof testId)
+    
+//     let cursor = Response.aggregate([{$match:{"test_id": testId }}])
+//     console.log(cursor);
+// }

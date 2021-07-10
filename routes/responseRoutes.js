@@ -5,7 +5,8 @@ const ResponseController=require("../controllers/ResponseRouters")
 
 router.route('/:id').post(ResponseController.sendResponse);
 router.route('/:testId').get(ResponseController.fetchResponse);
-
+//router.route('/a/:testId').get(ResponseController.fetchAvg);
 
 
 module.exports=router
+
